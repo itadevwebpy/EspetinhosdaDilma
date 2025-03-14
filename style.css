@@ -12,6 +12,7 @@ body {
     max-width: 100vh;
     margin: 0 auto;
     padding: 12px;
+    padding-bottom: 80px; /* Espaço para o footer fixo */
 }
 
 p {
@@ -145,6 +146,9 @@ h1, h2 {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu-inferior button {
@@ -154,11 +158,44 @@ h1, h2 {
     border-radius: 8px;
     cursor: pointer;
     color: white;
-    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .divissao {
     height: 60px;
+}
+
+/* Estilo do carrinho no footer */
+.carrinho-footer {
+    position: relative;
+    background: linear-gradient(to right, #ff6347, #ff8c00, #ffd700);
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+#contador-carrinho {
+    background: red;
+    color: white;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -5px;
+}
+
+#total-footer {
+    font-size: 15px;
+    font-weight: bold;
 }
 
 /* Novos estilos para observação e troco */
