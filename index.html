@@ -107,65 +107,21 @@
                 </div>
             </div>
         </section>
-
-        <!-- Carrinho de Compras -->
-        <div class="conferirpedido">
-            <h2>Confira seu Pedido</h2>
-            <div class="pedidos">
-                <p>Itens no Carrinho:</p>
-                <ul id="lista-carrinho"></ul>
-
-                <!-- Opção de entrega -->
-                <div id="tipo-entrega">
-                    <label>
-                        <input type="radio" name="tipo-entrega" value="retirada" checked> Retirada
-                    </label>
-                    <label>
-                        <input type="radio" name="tipo-entrega" value="entrega"> Entrega (+ R$ 5,00)
-                    </label>
-                </div>
-
-                <!-- Campo de endereço (aparece apenas se for entrega) -->
-                <div id="endereco-entrega" style="display: none;">
-                    <input type="text" id="endereco" placeholder="Digite seu endereço">
-                </div>
-
-                <!-- Campo de observação (aparece apenas se for entrega) -->
-                <div id="observacao" style="display: none;">
-                    <textarea id="observacao-texto" placeholder="Alguma observação?"></textarea>
-                </div>
-
-                <!-- Forma de pagamento -->
-                <div id="forma-pagamento">
-                    <label>
-                        <input type="radio" name="forma-pagamento" value="pix" checked> PIX
-                    </label>
-                    <label>
-                        <input type="radio" name="forma-pagamento" value="dinheiro"> Dinheiro
-                    </label>
-                </div>
-
-                <!-- Campo para troco (aparece apenas se for dinheiro) -->
-                <div id="troco" style="display: none;">
-                    <input type="text" id="valor-troco" placeholder="Valor do troco (opcional)">
-                </div>
-
-                <span id="total-pedido">Total: R$ 0,00</span>
-                <button id="enviar-whatsapp">Enviar Pedido pelo WhatsApp</button>
-            </div>
-        </div>
     </main>
 
-    <!-- Menu Inferior -->
+    <!-- Menu Inferior com Carrinho -->
     <footer class="menu-inferior">
-        <nav>
-            <button onclick="window.location.href='https://maps.app.goo.gl/KrtFQsqMUZtaLLMb8'">
-                <i class="bi bi-geo-alt-fill"></i> Local
-            </button>
-            <button onclick="window.location.href='https://wa.me/559992153859'">
-                <i class="bi bi-whatsapp"></i> Whats
-            </button>
-        </nav>
+        <button onclick="window.location.href='https://maps.app.goo.gl/KrtFQsqMUZtaLLMb8'">
+            <i class="bi bi-geo-alt-fill"></i> Local
+        </button>
+        <button onclick="window.location.href='https://wa.me/559992153859'">
+            <i class="bi bi-whatsapp"></i> Whats
+        </button>
+        <div class="carrinho-footer" onclick="window.location.href='pedido.html'">
+            <i class="bi bi-cart"></i>
+            <span id="contador-carrinho">0</span>
+            <span id="total-footer">Total: R$ 0,00</span>
+        </div>
     </footer>
 
     <div class="divissao"></div>
