@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espetinho da Dilma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="header-topo">
+            <img src="imagens/HEADER-TOPO.png" alt="Cabeçalho do Espetinho da Dilma">
+        </div>
+    </header>
+
+    <main>
+        <a href="https://maps.app.goo.gl/KrtFQsqMUZtaLLMb8">
+            <p><i class="bi bi-geo-alt-fill"></i> Av. Piqui, Nº 1373, Prox. a Praça do Piqui.</p>
+        </a>
+        <h1>CARDÁPIO</h1>
+
+        <!-- Seção de Espetinhos -->
+        <section class="container-principal">
+            <h2 class="titulo-opcs">OPÇÕES DE ESPETINHOS</h2>
+            <div class="item" data-id="1" data-categoria="espetinho">
+                <span><strong>Espetinho de Carne</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 17,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="2" data-categoria="espetinho">
+                <span><strong>Espetinho de Toscana</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 17,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="3" data-categoria="espetinho">
+                <span><strong>Espetinho de Frango</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 17,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="4" data-categoria="espetinho">
+                <span><strong>Espetinho de Porco</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 17,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Acompanhamentos -->
+        <h2 class="titulo-opcs">ACOMPANHAMENTOS INCLUSOS</h2>
+        <div class="items">
+            <span class="spanitem">Arroz baião de 2 ou Cenoura</span>
+            <span class="spanitem">Macarrão</span>
+            <span class="spanitem">Vinagrete</span>
+            <span class="spanitem">Farofa</span>
+            <span class="spanitem">Maionese</span>
+            <span class="spanitem">Macaxeira</span>
+            <span class="spanitem">Salada crua</span>
+            <span class="spanitem">Purê de batata</span>
+        </div>
+
+        <!-- Seção de Bebidas -->
+        <section class="container-principal">
+            <h2 class="titulo-opcs">BEBIDAS</h2>
+            <div class="item" data-id="5" data-categoria="bebida">
+                <span><strong>Refrigerante 1L</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 7,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="6" data-categoria="bebida">
+                <span><strong>Refrigerante Lata</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 3,50</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="8" data-categoria="bebida">
+                <span><strong>Suco de Acerola</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 5,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="9" data-categoria="bebida">
+                <span><strong>Suco de Goiaba</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 5,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+            <div class="item" data-id="10" data-categoria="bebida">
+                <span><strong>Suco de Maracujá</strong></span>
+                <div class="valorecarrinho">
+                    <span>R$ 7,00</span>
+                    <button class="adicionar-carrinho"><i class="bi bi-cart-plus"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrinho de Compras -->
+        <div class="conferirpedido">
+            <h2>Confira seu Pedido</h2>
+            <div class="pedidos">
+                <p>Itens no Carrinho:</p>
+                <ul id="lista-carrinho"></ul>
+
+                <!-- Opção de entrega -->
+                <div id="tipo-entrega">
+                    <label>
+                        <input type="radio" name="tipo-entrega" value="retirada" checked> Retirada
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo-entrega" value="entrega"> Entrega (+ R$ 5,00)
+                    </label>
+                </div>
+
+                <!-- Campo de endereço (aparece apenas se for entrega) -->
+                <div id="endereco-entrega" style="display: none;">
+                    <input type="text" id="endereco" placeholder="Digite seu endereço">
+                </div>
+
+                <!-- Campo de observação (aparece apenas se for entrega) -->
+                <div id="observacao" style="display: none;">
+                    <textarea id="observacao-texto" placeholder="Alguma observação?"></textarea>
+                </div>
+
+                <!-- Forma de pagamento -->
+                <div id="forma-pagamento">
+                    <label>
+                        <input type="radio" name="forma-pagamento" value="pix" checked> PIX
+                    </label>
+                    <label>
+                        <input type="radio" name="forma-pagamento" value="dinheiro"> Dinheiro
+                    </label>
+                </div>
+
+                <!-- Campo para troco (aparece apenas se for dinheiro) -->
+                <div id="troco" style="display: none;">
+                    <input type="text" id="valor-troco" placeholder="Valor do troco (opcional)">
+                </div>
+
+                <span id="total-pedido">Total: R$ 0,00</span>
+                <button id="enviar-whatsapp">Enviar Pedido pelo WhatsApp</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Menu Inferior -->
+    <footer class="menu-inferior">
+        <nav>
+            <button onclick="window.location.href='https://maps.app.goo.gl/KrtFQsqMUZtaLLMb8'">
+                <i class="bi bi-geo-alt-fill"></i> Local
+            </button>
+            <button onclick="window.location.href='https://wa.me/559992153859'">
+                <i class="bi bi-whatsapp"></i> Whats
+            </button>
+        </nav>
+    </footer>
+
+    <div class="divissao"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
